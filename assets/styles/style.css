@@ -1,0 +1,18 @@
+.poster {
+  width: 400px;
+  height: 225px;
+}
+
+.name-title{
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+#game-col {
+  width: 100%;
+}
