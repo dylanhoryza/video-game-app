@@ -1,11 +1,42 @@
+body {
+  background-color: rgb(18, 17, 17);
+  color: white;
+}
+
+
 .poster {
   width: 400px;
   height: 225px;
+  border-radius: 10px;
+  
 }
 
 .name-title{
   width: 400px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
 }
+
+
+
+.game-info {
+ text-align: center;
+ width: 400px;
+ margin-bottom: 30px;
+ line-height: 15px;
+ background-color: purple;
+ border-radius: 10px;
+ padding: 10px;
+}
+
+
+
+
 
 h1 {
   text-align: center;
@@ -14,5 +45,8 @@ h1 {
 }
 
 #game-col {
-  width: 100%;
+  width: 400px;
+  
+  
 }
+

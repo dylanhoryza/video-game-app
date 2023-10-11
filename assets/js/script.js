@@ -34,14 +34,17 @@ function displayGames(data) {
     
     const gamesCard = $('<div class="col" id="game-col">');
     
+    
     gamesCard.html(`
     <div class="col-lg-3 col-md-6 col-sm-12">
       <div class="item">
       <img src= ${poster} class="poster">
       <h3 class="name-title">${name}</h3>
+      <div class="game-info">
       <p class="platforms">${platforms}</p>
-      <p class="ratings">${rating}</p>
-      <p class="release-date">${releaseDate}</p>
+      <p class="release-date">🗓️ ${releaseDate}</p>
+      <p class="ratings">⭐ ${rating}</p>
+      </div>
       </div>
     </div>
     
