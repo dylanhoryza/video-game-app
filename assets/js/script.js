@@ -9,12 +9,15 @@ function getGameInfo() {
   })
   .then(function (data) {
     console.log(data);
-    const nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=2&page_size=18&search=`
-    console.log(nextGameURL);
+
     let pageNumber = 2;
+    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&search=`
+    console.log(nextGameURL);
+    
     const loadGamesBtn = $('.load-games-btn');
     loadGamesBtn.on('click', () => {
       pageNumber++;
+      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&search=`
       // Check if there is a next URL
       if (nextGameURL) {
         
@@ -88,7 +91,7 @@ function displayGames(data) {
     
     `);
     gameContainer.append(gamesCard);
-    // loadGamesBtn.on('click', loadNextGames);
+   
     
 
   }
