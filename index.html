@@ -10,7 +10,19 @@
 
 <body>
   <h1>Video Game App</h1>
- 
+  <form id="form">
+    <input type="search" id="search" name="search"
+    placeholder="Search">
+    <button class="search-btn">Search</button>
+    </form>
+
+    <select id="filter-dropdown">
+      <option value="all">All Games</option>
+      <option value="rating">By Rating</option>
+      <option value="newest">By Newest</option>
+      <!-- Add more filter options as needed -->
+    </select>
+    
 
   <div class="container d-flex flex-wrap" id="game-container">
     <section class="row justify-content-center ">
