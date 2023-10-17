@@ -3,6 +3,39 @@ body {
   color: white;
 }
 
+#search {
+  width: 250px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+  
+}
+
+.search-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: purple;
+  color: white;
+}
+
+#form {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 10px;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#filter-dropdown {
+  width: 150px;
+  height: 40px;
+}
 
 .poster {
   width: 400px;
