@@ -18,7 +18,7 @@ const formSubmitHandler = function (event) {
 formEl.on('submit', formSubmitHandler);
 
 function getSearchedGame() {
-  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2017-01-01,2023-09-30&added&page_size=9&search=-${gameTitle}`
+  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2017-01-01,2024-01-01&added&page_size=9&search=-${gameTitle}&search_precise`
   fetch(apiUrl)
   .then(function (response) {
     return response.json();
@@ -32,7 +32,7 @@ function getSearchedGame() {
 
 
 function getAllGames() {
-  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2017-01-01,2023-09-30&added&page_size=18&search`
+  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2023-01-01,2023-11-01&added&page_size=18&search`
   
   fetch(apiUrl)
   .then(function (response) {
@@ -42,13 +42,13 @@ function getAllGames() {
     console.log(data);
 
     let pageNumber = 2;
-    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&search`
+    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2023-01-01%2C2023-11-01&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&search`
     console.log(nextGameURL);
     
     const loadGamesBtn = $('.load-games-btn');
     loadGamesBtn.on('click', () => {
       pageNumber++;
-      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&search`;
+      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2023-01-01%2C2023-11-01&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&search`;
       // Check if there is a next URL
       if (nextGameURL) {
         
@@ -73,7 +73,7 @@ function getAllGames() {
 };
 
 function filterGamesRating() {
-  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2022-01-01,2023-09-30&added&page_size=18&ordering=-rating`
+  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2017-01-01,2024-01-01&added&page_size=18&ordering=-rating`
   
   fetch(apiUrl)
   .then(function (response) {
@@ -83,13 +83,13 @@ function filterGamesRating() {
     console.log(data);
 
     let pageNumber = 2;
-    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-rating`
+    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2017-01-01%2C2024-01-01&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-rating`
     console.log(nextGameURL);
     
     const loadGamesBtn = $('.load-games-btn');
     loadGamesBtn.on('click', () => {
       pageNumber++;
-      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-rating`
+      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2017-01-01%2C2024-01-01&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-rating`
       // Check if there is a next URL
       if (nextGameURL) {
         
@@ -113,7 +113,7 @@ function filterGamesRating() {
 };
 
 function filterGamesNewest() {
-  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2022-01-01,2023-09-30&added&page_size=18&ordering=-released`
+  const apiUrl = `https://api.rawg.io/api/games?key=9cdfe8e7af674d6d825da9805c8c6545&dates=2017-01-01,2023-10-31&added&page_size=18&ordering=-released`
   
   fetch(apiUrl)
   .then(function (response) {
@@ -123,13 +123,13 @@ function filterGamesNewest() {
     console.log(data);
 
     let pageNumber = 2;
-    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-released`
+    let nextGameURL = `https://api.rawg.io/api/games?added=&dates=2017-01-01%2C2023-10-31&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-released`
     console.log(nextGameURL);
     
     const loadGamesBtn = $('.load-games-btn');
     loadGamesBtn.on('click', () => {
       pageNumber++;
-      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2022-01-01%2C2023-09-30&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-released`
+      nextGameURL = `https://api.rawg.io/api/games?added=&dates=2017-01-01%2C2023-10-31&key=9cdfe8e7af674d6d825da9805c8c6545&page=${pageNumber}&page_size=18&ordering=-released`
       // Check if there is a next URL
       if (nextGameURL) {
         
@@ -201,6 +201,8 @@ function displayGames(data) {
     const metacritic = games.metacritic;
     const releaseDate = games.released;
     const poster = games.background_image;
+
+    const formattedReleaseDate = dayjs(releaseDate).format('MMM,D,YYYY');
     
     const gamesCard = $('<div class="col" id="game-col">');
     
@@ -209,13 +211,19 @@ function displayGames(data) {
     gamesCard.html(`
     <div class="col-lg-3 col-md-6 col-sm-12">
       <div class="item">
+      
+      
+      <div class="game-info">
       <img src= ${poster} class="poster">
       <h3 class="name-title">${name}</h3>
-      <div class="game-info">
       <p class="platforms">${getPlatformStr(platforms)}</p>
-      <p class="release-date">🗓️ ${releaseDate}</p>
+      <p class="release-date">🗓️ ${formattedReleaseDate}</p>
       <p class="ratings">⭐ ${rating}</p>
-      <p class="metacritic">Metacritic: ${metacritic}%</p>
+      <div class="btn-add-style">
+      <label class="btn-label">Add to Wishlist</label>
+      <button class="btn-add">+</button>
+      </div>
+      
       </div>
       </div>
       
