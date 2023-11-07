@@ -221,7 +221,7 @@ function displayGames(data) {
       <p class="ratings">⭐ ${rating}</p>
       <div class="btn-add-style">
       <label class="btn-label">Add to Wishlist</label>
-      <button class="btn-add">+</button>
+      <button class="add-wishlist-btn">+</button>
       </div>
       
       </div>
@@ -231,11 +231,12 @@ function displayGames(data) {
     
     `);
     gameContainer.append(gamesCard);
-   
-    
 
-  }
+    // const addWishlistBtn = gamesCard.find('.add-wishlist-btn');
+ }
 }
+
+
 
 getAllGames();
 filterGamesRating();
